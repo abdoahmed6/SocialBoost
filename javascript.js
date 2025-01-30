@@ -117,7 +117,19 @@ document.querySelector('.order-button').addEventListener('click', () => {
         window.location.href = '/contact.html';
     }, 3000);
 });
-
+// Add new comment
+function addComment() {
+    const userName = document.getElementById('userName').value.trim();
+    const commentText = document.getElementById('newComment').value.trim();
+    if (userName !== '' && commentText !== '') {
+        const commentContainer = document.createElement('div');
+        commentContainer.classList.add('comment');
+        commentContainer.innerHTML = `<h4>${userName}</h4><p>⭐⭐⭐⭐</p><p>${commentText}</p>`;
+        document.getElementById('comments').appendChild(commentContainer);
+        document.getElementById('userName').value = '';
+        document.getElementById('newComment').value = '';
+    }
+}
 // التأثيرات التفاعلية على الحقول المنسدلة
 document.querySelectorAll('.dropdown').forEach(dropdown => {
     dropdown.addEventListener('click', () => {

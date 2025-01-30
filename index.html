@@ -383,7 +383,7 @@
             if (userName !== '' && commentText !== '') {
                 const commentContainer = document.createElement('div');
                 commentContainer.classList.add('comment');
-                commentContainer.innerHTML = `<h4>${userName}</h4><p>⭐⭐⭐⭐</p><p>${commentText}</p>`;
+                commentContainer.innerHTML=<h4>${userName}</h4> <p>⭐⭐⭐⭐</p> <p>${commentText}</p>;
                 document.getElementById('comments').appendChild(commentContainer);
                 document.getElementById('userName').value = '';
                 document.getElementById('newComment').value = '';
